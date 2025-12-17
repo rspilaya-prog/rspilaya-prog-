@@ -1,13 +1,11 @@
-class Animal:
-    def __init__(self, nombre):
+class Persona:
+    def __init__(self, nombre, edad):
         self.nombre = nombre
+        self.__edad = edad  # atributo privado
 
-    def hablar(self):
-        print("El animal hace un sonido")
+    def mostrar_edad(self):
+        return self.__edad
 
-class Perro(Animal):
-    def hablar(self):
-        print(self.nombre, "dice: Guau")
+persona = Persona("Ana", 20)
+print("Edad:", persona.mostrar_edad())
 
-perro = Perro("Firulais")
-perro.hablar()
